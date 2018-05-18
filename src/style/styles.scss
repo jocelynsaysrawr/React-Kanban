@@ -1,0 +1,34 @@
+@import url(https://fonts.googleapis.com/css?family=Julius+Sans+One);
+
+$julius-sans-one: "Julius Sans One", sans-serif;
+
+.header {
+  width: 100%;
+  height: 80px;
+  font-family: $julius-sans-one;
+  color: white;
+  background: rgb(38, 38, 48);
+  display: flex;
+  align-items: center;
+
+  header {
+    width: 80%;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 50px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  a.new-task-btn {
+    text-decoration: none;
+    padding: 8px 15px;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid white;
+    height: 19px;
+    justify-content: flex-end;
+    min-width: 50px;
+    flex-wrap: nowrap;
+  }
+}
