@@ -9,7 +9,7 @@ export default () => {
         <h1>Kanban</h1>
       </header>
 
-      <Link className="new-task-btn" to="/">
+      <Link className="new-task-btn" to="/cards/new">
         + task
       </Link>
     </div>
