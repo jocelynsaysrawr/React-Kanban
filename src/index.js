@@ -9,6 +9,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import BoardsIndex from "./components/boards_index";
 import CardsNew from "./components/cards_new";
+//import promise from "redux-promise";
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
