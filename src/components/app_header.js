@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../style/styles.scss";
 
 export default () => {
   return (
@@ -8,10 +7,11 @@ export default () => {
       <header>
         <h1>Kanban</h1>
       </header>
-
-      <Link className="new-task-btn" to="/cards/new">
-        + task
-      </Link>
+      <div className="new-task">
+        <Link className="new-task-btn" to="/cards/new">
+          + task
+        </Link>
+      </div>
     </div>
   );
 };

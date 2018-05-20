@@ -10,19 +10,21 @@ import CardsDone from "./cards_done";
 class BoardsIndex extends Component {
   render() {
     return (
-      <div>
+      <div className="container">
         <AppHeader />
-        <div className="in-queue">
-          <h1 className="card-list">In Queue</h1>
-          <CardsQueue />
-        </div>
-        <div className="in-progress">
-          <h1 className="card-list">In Progress</h1>
-          <CardsInProgress />
-        </div>
-        <div className="done">
-          <h1 className="card-list">Done</h1>
-          <CardsDone />
+        <div className="boards">
+          <div className="in-queue">
+            <h1 className="card-list">In Queue</h1>
+            <CardsQueue />
+          </div>
+          <div className="in-progress">
+            <h1 className="card-list">In Progress</h1>
+            <CardsInProgress />
+          </div>
+          <div className="done">
+            <h1 className="card-list">Done</h1>
+            <CardsDone />
+          </div>
         </div>
       </div>
     );

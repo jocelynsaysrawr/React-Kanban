@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { cardsDone } from "../actions";
+import makeCard from "./card.js";
 
 class CardsDone extends Component {
   componentDidMount() {
@@ -9,22 +10,14 @@ class CardsDone extends Component {
 
   renderDone() {
     return this.props.done.map(card => {
-      return (
-        <li key={card.card_id} className="card">
-          <div className="card-detail">
-            <h3 className="card-title">{card.card_title}</h3>
-            <p className="card-priority">Priority: {card.card_priority}</p>
-            <p className="card-assignment">Assigned to: {card.assigned_to}</p>
-          </div>
-        </li>
-      );
+      return makeCard(card);
     });
   }
 
   render() {
     return (
       <div>
-        <ul>{this.renderDone()}</ul>
+        <ul className="done">{this.renderDone()}</ul>
       </div>
     );
   }

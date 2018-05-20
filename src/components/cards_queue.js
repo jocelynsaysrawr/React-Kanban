@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { cardsInQueue } from "../actions";
+import makeCard from "./card";
 
 class CardsInQueue extends Component {
   componentDidMount() {
@@ -9,22 +10,14 @@ class CardsInQueue extends Component {
 
   renderQueue() {
     return this.props.queue.map(card => {
-      return (
-        <li key={card.card_id} className="card">
-          <div className="card-detail">
-            <h3 className="card-title">{card.card_title}</h3>
-            <p className="card-priority">Priority: {card.card_priority}</p>
-            <p className="card-assignment">Assigned to: {card.assigned_to}</p>
-          </div>
-        </li>
-      );
+      return makeCard(card);
     });
   }
 
   render() {
     return (
       <div>
-        <ul>{this.renderQueue()}</ul>
+        <ul className="queue">{this.renderQueue()}</ul>
       </div>
     );
   }
