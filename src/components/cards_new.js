@@ -4,7 +4,7 @@ import React, { Component } from "react";
 
 class CardsNew extends Component {
   render() {
-    return <div>CardsNew</div>;
+    return <div className="cardsNew" />;
   }
 }
 

@@ -3,11 +3,27 @@ export const SELECT_CARD = "select_card";
 export const CARDS_IN_QUEUE = "cards_in_queue";
 export const CARDS_IN_PROGRESS = "cards_in_progress";
 export const CARDS_DONE = "cards_done";
+export const OPEN_MODAL = "open_modal";
+export const CLOSE_MODAL = "close_modal";
 
 export const createCard = values => {
   console.log("createCard values: ", values);
   return {
     type: CREATE_CARD
+  };
+};
+
+export const openModal = obj => {
+  return {
+    type: OPEN_MODAL,
+    obj
+  };
+};
+
+export const closeModal = obj => {
+  return {
+    type: CLOSE_MODAL,
+    obj
   };
 };
 
